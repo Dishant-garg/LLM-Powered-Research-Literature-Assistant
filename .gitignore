@@ -1,0 +1,15 @@
+# NLTK data (downloaded at runtime)
+nltk_data/
+
+# OS files
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# IDE
+.vscode/
+.idea/

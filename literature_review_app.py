@@ -32,8 +32,10 @@ if 'abstract' not in st.session_state:
 if 'keywords' not in st.session_state:
     st.session_state.keywords = ""
 
-custom_nltk_path = os.path.join(os.getcwd(), "nltk_data")
-nltk.data.path.append(custom_nltk_path)
+# Auto-download NLTK data at runtime (works on Streamlit Cloud)
+nltk.download('punkt', quiet=True)
+nltk.download('punkt_tab', quiet=True)
+nltk.download('stopwords', quiet=True)
 
 # Set page config
 st.set_page_config(page_title="Research Literature Assistant", layout="wide")
